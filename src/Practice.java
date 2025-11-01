@@ -7,9 +7,21 @@ public class Practice {
      */
     public static int maxDiff(int[] nums) {
         // TODO: implement this
-        return -1;
-    }
+        int maxnum = nums[0];
+        int minnum = nums[0];
 
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > maxnum) {
+                maxnum = nums[i];
+            } else if (nums[i] < minnum) {
+                minnum = nums[i];
+
+            }
+
+        }
+        int diff = maxnum - minnum;
+        return diff;
+    }
 
     // TODO: Implement the other methods from the study guide AND tests for each one
 
