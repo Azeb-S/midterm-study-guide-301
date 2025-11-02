@@ -1,7 +1,9 @@
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
@@ -50,6 +52,14 @@ public class PracticeTest {
     void testlongestWordStartsWith() {
         ArrayList<String> words = new ArrayList<>(List.of("apple", "ant", "banana", "avocado"));
         String actual = Practice.longestWordStartsWith(words);
+
+        assertEquals("avocado", actual);
+    }
+
+    @Test
+    void testlongestWordStartsWithHasSet() {
+        HashSet<String> words = new HashSet<>(Set.of("apple", "ant", "banana", "avocado"));
+        String actual = Practice.longestWordStartsWithHashSet(words);
 
         assertEquals("avocado", actual);
     }

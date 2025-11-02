@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Set;
 
 public class Practice {
     /**
@@ -39,11 +40,7 @@ public class Practice {
         return diffnum;
     }
 
-    /**
-     * 
-     * Find the longest word that starts with a specific character letter in
-     *
-     */
+    // * Find the longest word that starts with a specific character letter in
 
     public static String longestWordStartsWith(ArrayList<String> words) {
         char search = 'a';
@@ -55,6 +52,22 @@ public class Practice {
         }
 
         return longest;
+    }
+
+    // * Find the longest word that starts with a specific character letter in using
+    // Hash set
+
+    public static String longestWordStartsWithHashSet(Set<String> words) {
+        char search = 'a';
+        String longest = "";
+        for (String w : words) {
+            if (w.charAt(0) == search && w.length() > longest.length()) {
+                longest = w;
+            }
+        }
+
+        return longest;
+
     }
 
     // For each method you are only required to implement it for one of the data
