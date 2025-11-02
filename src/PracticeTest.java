@@ -118,4 +118,12 @@ public class PracticeTest {
         assertEquals(4, actual);
     }
 
+    @Test
+    void testsecondLargestNumberSetNegative() {
+        HashSet<Integer> numbers = new HashSet<>(Set.of(-11, -2, -3, -4, -9));
+        int actual = Practice.secondLargestNumberSet(numbers);
+
+        assertEquals(-3, actual);
+    }
+
 }
