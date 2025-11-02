@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Set;
 
 public class Practice {
@@ -81,15 +82,33 @@ public class Practice {
         int n = 0;
         int m = 5;
         int count = 0;
-
         for (String w : words) {
             if (w.length() > n && w.length() < m) {
-
                 count += 1;
-
             }
         }
-
         return count;
     }
+
+    // Find the difference between the how many odd and even numbers there are in:
+
+    public static int diffBetweenOddAndEven(HashMap<Integer, Integer> nums) {
+
+        int oddNum = 0;
+        int evenNum = 0
+        for(int n : nums.values()){
+
+            if(n % 2 == 0){
+                evenNum += 1;
+            }
+            if(n % 2 != 0){
+                oddNum += 1;
+            }
+        }
+        int diff = oddNum - evenNum;
+        return diff;
+    }
+
+    // Find the second-largest number in:
+
 }
