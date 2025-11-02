@@ -117,7 +117,20 @@ public class Practice {
 
         int largest = Integer.MIN_VALUE;
         int secondLargest = Integer.MIN_VALUE;
-        HashSet<Integer> newNumbers = new HashSet<>();
+        for (int n : nums) {
+            if (n > largest) {
+                secondLargest = largest;
+                largest = n;
+            } else if (n > secondLargest && n < largest) {
+                secondLargest = n;
+            }
+        }
+        return secondLargest;
+    }
+
+    public static int secondLargestNumberSet(HashSet<Integer> nums) {
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
 
         for (int n : nums) {
             if (n > largest) {
@@ -126,8 +139,8 @@ public class Practice {
             } else if (n > secondLargest && n < largest) {
                 secondLargest = n;
             }
-
         }
+
         return secondLargest;
     }
 
