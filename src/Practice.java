@@ -15,9 +15,7 @@ public class Practice {
                 maxnum = nums[i];
             } else if (nums[i] < minnum) {
                 minnum = nums[i];
-
             }
-
         }
         int diff = maxnum - minnum;
         return diff;

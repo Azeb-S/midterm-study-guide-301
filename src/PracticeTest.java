@@ -8,7 +8,7 @@ public class PracticeTest {
     @Test
     void testMaxDiffPositiveAndNegative() {
         // Arrange
-        int[] numbers = {8, -2, 9, -5};
+        int[] numbers = { 8, -2, 9, -5 };
 
         // Act
         int actual = Practice.maxDiff(numbers);
@@ -17,10 +17,22 @@ public class PracticeTest {
         // Largest: 9, Smallest: -5, Difference: 9 - -5 = 14
         assertEquals(14, actual);
     }
-    
 
     // TODO: Make tests for each problem you solve
-    
+    @Test
+    void testMaxDiffPositive() {
+        int[] numbers = { 8, 9, 12, 54, 20 };
+        int actual = Practice.maxDiff(numbers);
+
+        assertEquals(46, actual);
+    }
+
+    @Test
+    void testMaxDiffNegative() {
+        int[] numbers = { -1, -2, -3, -4, 0 };
+        int actual = Practice.maxDiff(numbers);
+
+        assertEquals(4, actual);
+    }
+
 }
-
-
