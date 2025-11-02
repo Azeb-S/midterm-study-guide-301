@@ -64,4 +64,12 @@ public class PracticeTest {
         assertEquals("avocado", actual);
     }
 
+    @Test
+    void testLongerThanNCharactersShorterThanM() {
+        String[] words = { "hi", "hello", "wonderful", "day" };
+        int actual = Practice.longerThanNCharactersShorterThanM(words);
+
+        assertEquals(2, actual);
+    }
+
 }
