@@ -110,4 +110,12 @@ public class PracticeTest {
         assertEquals(4, actual);
     }
 
+    @Test
+    void testsecondLargestNumberSet() {
+        HashSet<Integer> numbers = new HashSet<>(Set.of(1, 2, 3, 4, 9));
+        int actual = Practice.secondLargestNumberSet(numbers);
+
+        assertEquals(4, actual);
+    }
+
 }
