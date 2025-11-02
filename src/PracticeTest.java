@@ -102,4 +102,12 @@ public class PracticeTest {
         assertEquals(3, actual);
     }
 
+    @Test
+    void testsecondLargestNumber() {
+        ArrayList<Integer> numbers = new ArrayList<>(List.of(1, 2, 3, 4, 9));
+        int actual = Practice.secondLargestNumber(numbers);
+
+        assertEquals(4, actual);
+    }
+
 }

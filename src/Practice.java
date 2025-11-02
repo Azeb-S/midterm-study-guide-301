@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Set;
 
 public class Practice {
@@ -110,5 +112,23 @@ public class Practice {
     }
 
     // Find the second-largest number in:
+
+    public static int secondLargestNumber(ArrayList<Integer> nums) {
+
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+        HashSet<Integer> newNumbers = new HashSet<>();
+
+        for (int n : nums) {
+            if (n > largest) {
+                secondLargest = largest;
+                largest = n;
+            } else if (n > secondLargest && n < largest) {
+                secondLargest = n;
+            }
+
+        }
+        return secondLargest;
+    }
 
 }
