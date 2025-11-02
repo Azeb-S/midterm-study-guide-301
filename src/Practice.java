@@ -34,12 +34,27 @@ public class Practice {
             if (i < min) {
                 min = i;
             }
+        }
+        int diffnum = max - min;
+        return diffnum;
+    }
 
+    /**
+     * 
+     * Find the longest word that starts with a specific character letter in
+     *
+     */
+
+    public static String longestWordStartsWith(ArrayList<String> words) {
+        char search = 'a';
+        String longest = "";
+        for (String w : words) {
+            if (w.charAt(0) == search && w.length() > longest.length()) {
+                longest = w;
+            }
         }
 
-        int diffnum = max - min;
-
-        return diffnum;
+        return longest;
     }
 
     // For each method you are only required to implement it for one of the data

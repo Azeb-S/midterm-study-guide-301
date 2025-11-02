@@ -46,4 +46,12 @@ public class PracticeTest {
         assertEquals(4, actual);
     }
 
+    @Test
+    void testlongestWordStartsWith() {
+        ArrayList<String> words = new ArrayList<>(List.of("apple", "ant", "banana", "avocado"));
+        String actual = Practice.longestWordStartsWith(words);
+
+        assertEquals("avocado", actual);
+    }
+
 }
