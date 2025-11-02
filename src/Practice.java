@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -22,6 +24,23 @@ public class Practice {
     }
 
     // TODO: Implement the other methods from the study guide AND tests for each one
+    public static int maxDiffArrayList(ArrayList<Integer> nums) {
+        int max = nums.get(0);
+        int min = nums.get(0);
+        for (int i : nums) {
+            if (i > max) {
+                max = i;
+            }
+            if (i < min) {
+                min = i;
+            }
+
+        }
+
+        int diffnum = max - min;
+
+        return diffnum;
+    }
 
     // For each method you are only required to implement it for one of the data
     // structures. But use a different data structure for each method. For example,

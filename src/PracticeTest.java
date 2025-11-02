@@ -1,5 +1,8 @@
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 public class PracticeTest {
@@ -31,6 +34,14 @@ public class PracticeTest {
     void testMaxDiffNegative() {
         int[] numbers = { -1, -2, -3, -4, 0 };
         int actual = Practice.maxDiff(numbers);
+
+        assertEquals(4, actual);
+    }
+
+    @Test
+    void testMaxDiffNegativeArrayList() {
+        ArrayList<Integer> numbers = new ArrayList<>(List.of(-1, -2, -3, -4, 0));
+        int actual = Practice.maxDiffArrayList(numbers);
 
         assertEquals(4, actual);
     }
