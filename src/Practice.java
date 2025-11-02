@@ -95,13 +95,13 @@ public class Practice {
     public static int diffBetweenOddAndEven(HashMap<Integer, Integer> nums) {
 
         int oddNum = 0;
-        int evenNum = 0
-        for(int n : nums.values()){
+        int evenNum = 0;
+        for (int n : nums.values()) {
 
-            if(n % 2 == 0){
+            if (n % 2 == 0) {
                 evenNum += 1;
             }
-            if(n % 2 != 0){
+            if (n % 2 != 0) {
                 oddNum += 1;
             }
         }

@@ -1,8 +1,10 @@
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.junit.jupiter.api.Test;
@@ -70,6 +72,34 @@ public class PracticeTest {
         int actual = Practice.longerThanNCharactersShorterThanM(words);
 
         assertEquals(2, actual);
+    }
+
+    @Test
+    void testDiffBetweenOddAndEven() {
+        HashMap<Integer, Integer> numbers = new HashMap<>(Map.of(
+                1, 2,
+                2, 1,
+                3, 4,
+                4, 7,
+                5, 8));
+        int actual = Practice.diffBetweenOddAndEven(numbers);
+
+        assertEquals(-1, actual);
+    }
+
+    @Test
+    void testDiffBetweenOddAndEvenPostiveresult() {
+        HashMap<Integer, Integer> numbers = new HashMap<>(Map.of(
+                1, 2,
+                2, 1,
+                3, 4,
+                4, 7,
+                5, 11,
+                6, 3,
+                7, 13));
+        int actual = Practice.diffBetweenOddAndEven(numbers);
+
+        assertEquals(3, actual);
     }
 
 }
