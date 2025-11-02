@@ -144,4 +144,20 @@ public class Practice {
         return secondLargest;
     }
 
+    public static int secondLargestNumberMap(HashMap<Integer, Integer> nums) {
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        for (int n : nums.values()) {
+            if (n > largest) {
+                secondLargest = largest;
+                largest = n;
+            } else if (n > secondLargest && n < largest) {
+                secondLargest = n;
+            }
+        }
+
+        return secondLargest;
+    }
+
 }

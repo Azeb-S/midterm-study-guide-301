@@ -126,4 +126,16 @@ public class PracticeTest {
         assertEquals(-3, actual);
     }
 
+    @Test
+    void testsecondLargestNumberMap() {
+        HashMap<Integer, Integer> numbers = new HashMap<>(Map.of(
+                1, 2,
+                2, 4,
+                3, 5,
+                4, 9));
+        int actual = Practice.secondLargestNumberMap(numbers);
+
+        assertEquals(5, actual);
+    }
+
 }
