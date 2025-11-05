@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 public class Practice {
@@ -196,6 +197,192 @@ public class Practice {
         }
 
         return count;
+    }
+
+    // Question 1
+
+    public static int practice(ArrayList<Integer> scores) {
+
+        // ArrayList<Integer> scores = new ArrayList<>(List.of(85, 90,75,95));
+
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        for (int score : scores) {
+            if (score > largest) {
+                largest = score;
+            } else if (score > secondLargest && secondLargest < largest) {
+                secondLargest = score;
+            }
+        }
+        return secondLargest;
+
+    }
+
+    // Question 2 – HashSet Uniqueness
+
+    public static HashSet<String> unique(String[] words) {
+
+        HashSet<String> result = new HashSet<>();
+        for (String word : words) {
+            result.add(word);
+        }
+
+        return result;
+
+    }
+
+    // Question 3 – HashMap Counting
+    // I need to know how to add values to hasmap and map it with key
+
+    public static HashMap<Integer, Integer> appears(int[] numbers) {
+
+        HashMap<Integer, Integer> count = new HashMap<>();
+
+        for (int n : numbers) {
+            if (count.containsKey(n)) {
+                count.put(n, count.get(n) + 1);
+            } else {
+                count.put(n, 1);
+            }
+        }
+
+        return count;
+    }
+    // Question 4 – Conversion
+
+    public static void convert() {
+        String[] names = { "Azeb", "Maya", "Liam" };
+        ArrayList<String> namesinArrayList = new ArrayList<>(List.of(names));
+
+    }
+
+    // Question 5 – Contains Check
+    public static void containes() {
+
+        ArrayList<Integer> numbers = new ArrayList<>(List.of(10, 20, 30, 40));
+
+        if (numbers.contains(25)) {
+            System.out.println("Found");
+        } else {
+            System.out.println("Not Found");
+        }
+
+    }
+    // Question 6 – HashSet Membership
+
+    public static void check() {
+        HashSet<Integer> codes = new HashSet<>(Set.of(100, 200, 300));
+
+        if (codes.contains(200)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+
+        String text = "Apple banana apple! BANANA, banana.";
+
+        String[] words = text.toLowerCase().replaceAll("[^a-z0-9\\s]", "").split("\\s+");
+
+    }
+
+    // Find the difference between the largest and smallest integer in:
+
+    public static int diffArray(int[] numberes) {
+
+        int maxValue = Integer.MIN_VALUE;
+        int minValue = Integer.MAX_VALUE;
+        int diff = 0;
+
+        for (int n : numberes) {
+
+            if (n > maxValue) {
+                maxValue = n;
+            } else if (n > minValue) {
+                minValue = n;
+            }
+        }
+        diff = maxValue - minValue;
+
+        return diff;
+    }
+
+    public static int diffArrayList(ArrayList<Integer> numberes) {
+
+        int maxValue = Integer.MIN_VALUE;
+        int minValue = Integer.MAX_VALUE;
+
+        for (int n : numberes) {
+            if (n < maxValue) {
+                maxValue = n;
+            } else if (n > minValue) {
+                minValue = n;
+            }
+        }
+        int diff = maxValue - minValue;
+        return diff;
+
+        // Find the longest word that starts with a specific character letter in:
+
+    }
+    // Find the longest word that starts with a specific character letter in:
+
+    public static String longestwordStartswithc(String[] words, char a) {
+
+        int max_lenth = 0;
+        String theOne = "";
+
+        for (String word : words) {
+            if (word.length() > max_lenth && word.charAt(0) == a) {
+                max_lenth = word.length();
+                theOne = word;
+
+            }
+        }
+
+        return theOne;
+    }
+
+    public static String longestWordStartsWithcArrayList(ArrayList<String> words, char a) {
+
+        int max_length = 0;
+        String theOne = "";
+
+        for (String word : words) {
+            if (word.length() > max_length && word.charAt(0) == a) {
+                max_length = word.length();
+                theOne = word;
+            }
+        }
+
+        return theOne;
+    }
+
+    public static String longestWordStartsWithcHasSet(HashSet<String> words, char a) {
+
+        int max_length = 0;
+        String theOne = "";
+        for (String word : words) {
+            if (word.length() > max_length && word.charAt(0) == a) {
+                max_length = word.length();
+                theOne = word;
+            }
+        }
+        return theOne;
+    }
+
+    public static String longestWordStartsWithcHasMap(HashMap<String, String> words, char a) {
+
+        int max_length = 0;
+        String theone = "";
+        for (String word : words.values()) {
+            if (word.length() > max_length && word.charAt(0) == a) {
+                max_length = word.length();
+                theone = word;
+            }
+        }
+
+        return theone;
     }
 
 }
