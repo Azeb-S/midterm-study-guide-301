@@ -88,6 +88,15 @@ public class PracticeTest {
     }
 
     @Test
+    void testDiffBetweenOddAndEvenArrayList() {
+        ArrayList<Integer> numbers = new ArrayList<>(List.of(2, 4, 7, 1, 3));
+
+        int actual = Practice.diffBetweenOddAndEvenArrayList(numbers);
+
+        assertEquals(2, actual);
+    }
+
+    @Test
     void testDiffBetweenOddAndEvenPostiveresult() {
         HashMap<Integer, Integer> numbers = new HashMap<>(Map.of(
                 1, 2,

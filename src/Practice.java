@@ -160,4 +160,42 @@ public class Practice {
         return secondLargest;
     }
 
+    // Find the difference between the how many odd and even numbers there are in:
+
+    public static int diffBetweenOddAndEvenArrayList(ArrayList<Integer> nums) {
+
+        int diff = 0;
+        int oddNum = 0;
+        int evenNum = 0;
+
+        for (int num : nums) {
+            if (num % 2 == 0) {
+                evenNum += 1;
+            } else if (num % 2 != 0) {
+                oddNum += 1;
+            }
+
+        }
+        diff = oddNum - evenNum;
+
+        return diff;
+
+    }
+
+    // Count how many words are longer than n characters and shorter than m
+
+    public static int longerThanNCharactersShorterThanMMap(HashMap<Integer, String> words, int n, int m) {
+
+        int count = 0;
+
+        for (String word : words.values()) {
+            if (word.length() > n && word.length() < m) {
+
+                count += 1;
+            }
+        }
+
+        return count;
+    }
+
 }
